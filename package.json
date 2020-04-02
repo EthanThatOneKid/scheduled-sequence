@@ -1,0 +1,19 @@
+{
+  "name": "scheduled-sequence",
+  "version": "1.0.0",
+  "description": "Mini package for creating scheduled sequences.",
+  "main": "main.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EthanThatOneKid/scheduled-sequence.git"
+  },
+  "author": "EthanThatOneKid",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EthanThatOneKid/scheduled-sequence/issues"
+  },
+  "homepage": "https://github.com/EthanThatOneKid/scheduled-sequence#readme"
+}
