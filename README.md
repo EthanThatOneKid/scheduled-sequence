@@ -11,13 +11,9 @@
 `npm i scheduled-sequence`
 
 ## 🛠 Usage
-> CommonJS:
+CommonJS: `const { ScheduledSequence } = require('scheduled-sequence');`
 
-`const { ScheduledSequence } = require('scheduled-sequence');`
-
-> ES6:
-
-`import { ScheduledSequence } from 'scheduled-sequence';`
+ES6: `import { ScheduledSequence } from 'scheduled-sequence';`
 
 > 💡 Pro-tip: Utilize the [test file](test.js) as an example
 
