@@ -10,8 +10,11 @@ const SEQUENCE_TEST_DATA = [
 
 const INJECTION_TEST_ARGS = [
   [4, 1e3],
-  [3, 3e3, 3]
+  [3, 3e3, 3],
+  [4, 4e2]
 ];
+
+const REMOVE_TEST_ARGS = [4];
 
 // Helpers
 const now = () => +new Date;
@@ -21,6 +24,7 @@ const now = () => +new Date;
 
   const sequence = ScheduledSequence(SEQUENCE_TEST_DATA);
   INJECTION_TEST_ARGS.forEach(args => sequence.inject(...args));
+  REMOVE_TEST_ARGS.forEach(arg => sequence.remove(arg));
   const initialTimestamp = now();
   for await (const details of sequence.distribute()) {
     const elapsed = now() - initialTimestamp;
