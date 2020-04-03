@@ -20,9 +20,7 @@ const now = () => +new Date;
 (async () => {
 
   const sequence = ScheduledSequence(SEQUENCE_TEST_DATA);
-  sequence.sequence.splice({details: 3, timeout: 1e3}, sequence.length - 1);
-  console.log({ sequence });
-  // INJECTION_TEST_ARGS.forEach(args => sequence.inject(...args));
+  INJECTION_TEST_ARGS.forEach(args => sequence.inject(...args));
   const initialTimestamp = now();
   for await (const details of sequence.distribute()) {
     const elapsed = now() - initialTimestamp;

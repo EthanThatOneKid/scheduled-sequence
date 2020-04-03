@@ -5,9 +5,12 @@ const ScheduledSequence = (sequence = []) => ({
   inject (
     details = {},
     timeout = 0,
-    index = this.sequence.length - 1
+    index = this.sequence.length
   ) {
-    this.sequence.splice(index, { details, timeout });
+    this.sequence.splice(index, 0, { details, timeout });
+  },
+  remove(index = this.sequence.length - 1) {
+    this.sequence.splice(index, 1);
   },
   async *distribute() {
     for (const { details, timeout } of this.sequence) {
